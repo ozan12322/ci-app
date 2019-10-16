@@ -19,6 +19,19 @@
 			<a href="<?= base_url(); ?>mahasiswa/tambah" class="btn btn-primary">Tambah Data Mahasiswa</a>
 		</div>
 	</div>
+	
+    <div class="row mt-3">
+      <div class="col-lg-6">
+        <form action="" method="post">
+          <div class="input-group">
+            <input type="text" class="form-control" placeholder="Cari mahasiswa.." name="keyword" id="keyword" autocomplete="off" aria-label="Recipient's username" aria-describedby="button-addon2">
+            <div class="input-group-append">
+              <button class="btn btn-primary" type="submit" id="tombolCari">Cari</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
 
 	<div class="row mt-3">
 		<div class="col-md-6">
@@ -46,8 +59,8 @@
 			      <td><?= $mhs['nrp']; ?></td>
 			      <td><?= $mhs['email']; ?></td>
 			      <td><?= $mhs['jurusan']; ?></td>
-			      <td><a href="" class="badge badge-primary float-right">detail</a></td>
-			      <td><a href="" class="badge badge-success float-right">edit</a></td>
+			      <td><a href="<?= base_url(); ?>mahasiswa/detail/<?= $mhs['id']; ?>" class="badge badge-primary float-right">detail</a></td>
+			      <td><a href="<?= base_url(); ?>mahasiswa/ubah/<?= $mhs['id']; ?>" class="badge badge-success float-right">ubah</a></td>
 			      <td><a href="<?= base_url(); ?>mahasiswa/hapus/<?= $mhs['id']; ?>" class="badge badge-danger float-right" onclick="return confirm('Yakin ?');">hapus</a></td>
 			    </tr>
 			    <?php endforeach; ?>
