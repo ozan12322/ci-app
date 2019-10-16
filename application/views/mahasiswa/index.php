@@ -23,14 +23,36 @@
 	<div class="row mt-3">
 		<div class="col-md-6">
 			<h3>Daftar Mahasiswa</h3>
-			<ul class="list-group">
+
+			<table class="table">
+			  <thead class="thead-dark">
+			    <tr>
+			      <th scope="col">No</th>
+			      <th scope="col">Nama</th>
+			      <th scope="col">NRP</th>
+			      <th scope="col">Email</th>
+			      <th scope="col">Jurusan</th>
+			      <th scope="col"></th>
+			      <th scope="col"></th>
+			      <th scope="col"></th>
+			    </tr>
+			  </thead>
+			  <tbody>
+			  	<?php $i = 1; ?>
 				<?php foreach ($mahasiswa as $mhs) : ?>
-			  <li class="list-group-item">
-			  	<?= $mhs['nama']; ?>
-			  	<a href="<?= base_url(); ?>mahasiswa/hapus/<?= $mhs['id']; ?>" class="badge badge-danger float-right" onclick="return confirm('Yakin ?');">hapus</a>
-			  </li>
-			  	<?php endforeach; ?>
-			</ul>
+			    <tr>
+			      <th scope="row"><?= $i++ ?></th>
+			      <td><?= $mhs['nama']; ?></td>
+			      <td><?= $mhs['nrp']; ?></td>
+			      <td><?= $mhs['email']; ?></td>
+			      <td><?= $mhs['jurusan']; ?></td>
+			      <td><a href="" class="badge badge-primary float-right">detail</a></td>
+			      <td><a href="" class="badge badge-success float-right">edit</a></td>
+			      <td><a href="<?= base_url(); ?>mahasiswa/hapus/<?= $mhs['id']; ?>" class="badge badge-danger float-right" onclick="return confirm('Yakin ?');">hapus</a></td>
+			    </tr>
+			    <?php endforeach; ?>
+			  </tbody>
+			</table>
 		</div>
 	</div>
 
