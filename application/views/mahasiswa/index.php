@@ -26,7 +26,7 @@
           <div class="input-group">
             <input type="text" class="form-control" placeholder="Cari mahasiswa.." name="keyword" id="keyword" autocomplete="off" aria-label="Recipient's username" aria-describedby="button-addon2">
             <div class="input-group-append">
-              <button class="btn btn-primary" type="submit" id="tombolCari">Cari</button>
+              <button class="btn btn-primary" type="submit" id="cariDataMahasiswa">Cari</button>
             </div>
           </div>
         </form>
