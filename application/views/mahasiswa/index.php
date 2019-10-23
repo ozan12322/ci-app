@@ -22,7 +22,7 @@
 	
     <div class="row mt-3">
       <div class="col-lg-6">
-        <form action="" method="post">
+        <form action="<?= base_url(); ?>mahasiswa/cari" method="post">
           <div class="input-group">
             <input type="text" class="form-control" placeholder="Cari mahasiswa.." name="keyword" id="keyword" autocomplete="off" aria-label="Recipient's username" aria-describedby="button-addon2">
             <div class="input-group-append">

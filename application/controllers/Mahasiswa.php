@@ -73,4 +73,13 @@
 			}
 		}
 
+		public function cari()
+		{
+			$data['judul'] = 'Daftar Mahasiswa';
+			$data['mahasiswa'] = $this->Mahasiswa_model->cariDataMahasiswa();
+			$this->load->view('templates/header', $data);
+			$this->load->view('mahasiswa/index', $data);
+			$this->load->view('templates/footer');
+		}
+
 	}
